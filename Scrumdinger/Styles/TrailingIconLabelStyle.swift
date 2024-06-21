@@ -1,6 +1,5 @@
 import SwiftUI
 
-
 struct TrailingIconLabelStyle: LabelStyle {
     func makeBody(configuration: Configuration) -> some View {
         HStack {
@@ -9,7 +8,6 @@ struct TrailingIconLabelStyle: LabelStyle {
         }
     }
 }
-
 
 extension LabelStyle where Self == TrailingIconLabelStyle {
     static var trailingIcon: Self { Self() }

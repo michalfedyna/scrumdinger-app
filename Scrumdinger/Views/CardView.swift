@@ -2,12 +2,12 @@ import SwiftUI
 
 struct CardView: View {
     let scrum: DailyScrum
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             Text(scrum.title)
                 .font(.headline)
-                .accessibilityAddTraits(/*@START_MENU_TOKEN@*/.isHeader/*@END_MENU_TOKEN@*/)
+                .accessibilityAddTraits(/*@START_MENU_TOKEN@*/ .isHeader/*@END_MENU_TOKEN@*/)
             Spacer()
             HStack {
                 Label("\(scrum.attendees.count)", systemImage: "person.3")
@@ -25,6 +25,6 @@ struct CardView: View {
 
 #Preview(traits: .fixedLayout(width: 400, height: 60)) {
     let scrum = DailyScrum.sampleData[2]
-    
+
     return CardView(scrum: scrum)
 }
